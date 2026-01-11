@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorsaVizyon | Ekonomi Haberleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --gold: #f0b90b;
+            --dark-bg: #0b0e11;
+            --card-bg: #1e2329;
+            --border: #2b3139;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eaeaea;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gold-text { color: var(--gold); }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        /* Haber Kategorileri */
+        .category-pill {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: #848e9c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .category-pill:hover, .category-pill.active {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* Manşet Haber Tasarımı */
+        .headline-card {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1611974717483-9b25022ecffc?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: flex-end;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+
+        /* Küçük Haber Listesi */
+        .trending-item {
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            transition: 0.2s;
+        }
+        .trending-item:hover { color: var(--gold); }
+
+        .search-bar {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><span class="gold-text">BORSA</span>VİZYON</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index2.html">Piyasalar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index4.html">Haberler</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="#" class="category-pill active">Hepsi</a>
+                    <a href="#" class="category-pill">BIST</a>
+                    <a href="#" class="category-pill">Kripto</a>
+                    <a href="#" class="category-pill">Dünya</a>
+                    <a href="#" class="category-pill">Emtia</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <input type="text" class="form-control search-bar" placeholder="Haberlerde ara...">
+                    <button class="btn btn-outline-warning"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="headline-card shadow-lg">
+                    <div class="headline-content">
+                        <span class="badge bg-warning text-dark mb-2">FLAŞ</span>
+                        <h1 class="fw-bold">FED Kararı Sonrası Piyasalarda Son Durum</h1>
+                        <p class="lead">Faiz oranlarının sabit bırakılmasının ardından altın fiyatları rekor tazeledi. Analistler ne diyor?</p>
+                        <a href="#" class="btn btn-warning fw-bold">Detayları Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <h4 class="gold-text fw-bold mb-4">Bugün Neler Oldu?</h4>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm overflow-hidden">
+                            <img src="https://picsum.photos/400/200?random=11" class="card-img-top" alt="Ekonomi">
+                            <div class="card-body">
+                                <div class="small text-muted mb-2"><i class="bi bi-clock"></i> 15 Dakika Önce</div>
+                                <h5 class="fw-bold">THY'den Dev Sipariş</h5>
+                                <p class="text-secondary small">Havacılık devi filosuna 50 yeni uçak katmak için görüşmelere başladı.</p>
+                                <a href="#" class="gold-text text-decoration-none fw-bold">Devamını Oku →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm overflow-hidden">
+                            <img src="https://picsum.photos/400/200?random=12" class="card-img-top" alt="Kripto">
+                            <div class="card-body">
+                                <div class="small text-muted mb-2"><i class="bi bi-clock"></i> 1 Saat Önce</div>
+                                <h5 class="fw-bold">Bitcoin'de Kritik Eşik</h5>
+                                <p class="text-secondary small">Kripto piyasasının öncüsü 68.000$ direncini zorluyor.</p>
+                                <a href="#" class="gold-text text-decoration-none fw-bold">Devamını Oku →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm overflow-hidden">
+                            <img src="https://picsum.photos/400/200?random=13" class="card-img-top" alt="Emtia">
+                            <div class="card-body">
+                                <div class="small text-muted mb-2"><i class="bi bi-clock"></i> 3 Saat Önce</div>
+                                <h5 class="fw-bold">Gümüş Fiyatları Hareketli</h5>
+                                <p class="text-secondary small">Endüstriyel talebin artmasıyla gümüş son 1 yılın zirvesinde.</p>
+                                <a href="#" class="gold-text text-decoration-none fw-bold">Devamını Oku →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card p-4 h-100">
+                    <h4 class="gold-text fw-bold mb-4">Trend Başlıklar</h4>
+                    
+                    <div class="trending-item">
+                        <span class="badge bg-secondary me-2">1</span>
+                        <a href="#" class="text-white text-decoration-none small">Merkez Bankası yıllık enflasyon raporunu sundu</a>
+                    </div>
+                    <div class="trending-item">
+                        <span class="badge bg-secondary me-2">2</span>
+                        <a href="#" class="text-white text-decoration-none small">Halka arz olacak yeni şirketler açıklandı</a>
+                    </div>
+                    <div class="trending-item">
+                        <span class="badge bg-secondary me-2">3</span>
+                        <a href="#" class="text-white text-decoration-none small">Otomotiv sektöründe ÖTV indirimi beklentisi</a>
+                    </div>
+                    <div class="trending-item">
+                        <span class="badge bg-secondary me-2">4</span>
+                        <a href="#" class="text-white text-decoration-none small">Dolar/TL paritesinde son durum analizi</a>
+                    </div>
+
+                    <div class="mt-5 p-3 rounded bg-dark border border-warning text-center">
+                        <h6>Haber Bültenimize Katılın</h6>
+                        <p class="small text-muted">Önemli gelişmeleri maille alın.</p>
+                        <input type="email" class="form-control form-control-sm mb-2 search-bar" placeholder="E-posta">
+                        <button class="btn btn-warning btn-sm w-100 fw-bold">Kaydol</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 mt-5 border-top border-secondary text-center">
+        <p class="text-secondary">© 2026 nur erel. Her Hakkı Saklıdır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

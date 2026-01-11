@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorsaVizyon | Akademi & Eğitim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --gold: #f0b90b;
+            --dark-bg: #0b0e11;
+            --card-bg: #1e2329;
+            --border: #2b3139;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eaeaea;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gold-text { color: var(--gold); }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+        }
+
+        /* Seviye Badge'leri */
+        .level-badge {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* İlerleme Çubuğu Rengi */
+        .progress { background-color: #0b0e11 !important; border-radius: 10px; }
+        .progress-bar { background-color: var(--gold) !important; color: black; font-weight: bold; }
+
+        /* Video Overlay */
+        .video-placeholder {
+            position: relative;
+            background: #000;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-btn {
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+        .video-placeholder:hover .play-btn {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: black;
+            font-weight: 700;
+            border-radius: 8px;
+        }
+
+        .instructor-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><span class="gold-text">BORSA</span>VİZYON</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index2.html">Piyasalar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index5.html">Eğitim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index7.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 text-center" style="background: linear-gradient(180deg, #161a1e 0%, var(--dark-bg) 100%); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <span class="badge bg-outline-warning border border-warning gold-text mb-3 px-3 py-2">BORSA AKADEMİ</span>
+            <h1 class="display-4 fw-bold">Finansal <span class="gold-text">Özgürlüğe</span> Giden Yol</h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 700px;">Profesyonel yatırımcılar tarafından hazırlanan modüllerle borsa dünyasında uzmanlaşın.</p>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card p-3 text-center border-0 shadow-sm">
+                    <h3 class="gold-text fw-bold mb-0">24</h3>
+                    <small class="text-secondary">Toplam Ders</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 text-center border-0 shadow-sm">
+                    <h3 class="gold-text fw-bold mb-0">12s</h3>
+                    <small class="text-secondary">Video İçerik</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 text-center border-0 shadow-sm">
+                    <h3 class="gold-text fw-bold mb-0">8</h3>
+                    <small class="text-secondary">Canlı Yayın</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 text-center border-0 shadow-sm">
+                    <h3 class="gold-text fw-bold mb-0">4.9/5</h3>
+                    <small class="text-secondary">Öğrenci Puanı</small>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mb-4 border-start border-warning border-4 ps-3">Popüler Eğitimler</h3>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="video-placeholder">
+                        <img src="https://picsum.photos/400/220?random=21" class="w-100 h-100 opacity-50" style="object-fit:cover">
+                        <i class="bi bi-play-circle-fill play-btn position-absolute"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="level-badge bg-success text-white">Başlangıç</span>
+                            <span class="text-secondary small"><i class="bi bi-person"></i> 12.5k Öğrenci</span>
+                        </div>
+                        <h5 class="fw-bold">Temel Analiz 101</h5>
+                        <p class="text-secondary small">Şirket bilançolarını okumayı ve hisse değerlemeyi sıfırdan öğrenin.</p>
+                        
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between mb-1 small">
+                                <span>İlerleme</span>
+                                <span class="gold-text">75%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-gold w-100 mt-4">Eğitime Devam Et</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="video-placeholder">
+                        <img src="https://picsum.photos/400/220?random=22" class="w-100 h-100 opacity-50" style="object-fit:cover">
+                        <i class="bi bi-play-circle-fill play-btn position-absolute"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="level-badge bg-warning text-dark">Orta Seviye</span>
+                            <span class="text-secondary small"><i class="bi bi-person"></i> 8.2k Öğrenci</span>
+                        </div>
+                        <h5 class="fw-bold">Teknik Analiz ve Formasyonlar</h5>
+                        <p class="text-secondary small">Mum çubukları, destek-direnç ve indikatörlerle işlem stratejileri.</p>
+                        
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between mb-1 small">
+                                <span>İlerleme</span>
+                                <span class="gold-text">20%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-warning w-100 mt-4">Kursa Başla</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <div class="video-placeholder">
+                        <img src="https://picsum.photos/400/220?random=23" class="w-100 h-100 opacity-50" style="object-fit:cover">
+                        <i class="bi bi-play-circle-fill play-btn position-absolute"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="level-badge bg-danger text-white">İleri Seviye</span>
+                            <span class="text-secondary small"><i class="bi bi-person"></i> 3.1k Öğrenci</span>
+                        </div>
+                        <h5 class="fw-bold">Algoritmik Ticaret ve Botlar</h5>
+                        <p class="text-secondary small">Kendi al-sat stratejinizi kodlayın ve otomatik hale getirin.</p>
+                        
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between mb-1 small">
+                                <span>İlerleme</span>
+                                <span class="gold-text">0%</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary w-100 mt-4 disabled text-muted">Kilitli</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-5 p-4 bg-dark border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center">
+                    <img src="https://picsum.photos/100/100?random=50" class="instructor-img mb-3 mb-md-0 shadow">
+                </div>
+                <div class="col-md-7 text-center text-md-start">
+                    <h5 class="fw-bold gold-text">Dr. Ahmet Yılmaz</h5>
+                    <p class="text-secondary small mb-0">Kıdemli Ekonomist ve Akademi Direktörü. 20 yıllık borsa tecrübesiyle her hafta canlı soru-cevap seansları düzenliyor.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <button class="btn btn-outline-warning btn-sm">Eğitmene Soru Sor</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="py-5 border-top border-secondary text-center">
+        <p class="text-secondary">© 2026 nur erel. Bilgi Güçtür.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

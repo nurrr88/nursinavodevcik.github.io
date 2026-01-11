@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorsaVizyon | Hakkımızda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --gold: #f0b90b;
+            --dark-bg: #0b0e11;
+            --card-bg: #1e2329;
+            --border: #2b3139;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #eaeaea;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gold-text { color: var(--gold); }
+        
+        /* Hakkımızda Özel Hero Alanı */
+        .about-hero {
+            background: linear-gradient(rgba(11, 14, 17, 0.8), rgba(11, 14, 17, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        /* Ekip Kartları */
+        .team-card {
+            text-align: center;
+            padding: 30px;
+        }
+        .team-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        /* Başarı Sayaçları */
+        .stat-box {
+            border-right: 1px solid var(--border);
+        }
+        .stat-box:last-child { border-right: none; }
+
+        /* Zaman Çizelgesi (Timeline) Stil */
+        .timeline-item {
+            padding: 20px;
+            border-left: 2px solid var(--gold);
+            margin-left: 20px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><span class="gold-text">BORSA</span>VİZYON</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index2.html">Piyasalar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index6.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index7.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-hero text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Finansın <span class="gold-text">Dijital Mimarları</span></h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 800px;">Veriyi stratejiye, stratejiyi kazanca dönüştürmek için 15 yıldır aynı heyecanla çalışıyoruz.</p>
+        </div>
+    </header>
+
+    <section class="container py-5 mt-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h2 class="gold-text fw-bold mb-4">Biz Kimiz?</h2>
+                <p class="lead">BorsaVizyon, 2010 yılında küçük bir teknoloji girişimi olarak İstanbul'da kuruldu.</p>
+                <p class="text-secondary">Bugün, binlerce yatırımcıya anlık veri sağlayan, yapay zeka destekli analiz araçları sunan ve finansal okuryazarlığı önceliklendiren bir teknoloji üssüyüz. Amacımız, karmaşık borsa verilerini her seviyeden yatırımcı için erişilebilir ve aksiyon alınabilir kılmaktır.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="stat-box">
+                            <h3 class="gold-text fw-bold">150K+</h3>
+                            <p class="small text-muted">Aktif Kullanıcı</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat-box">
+                            <h3 class="gold-text fw-bold">15 Yıl</h3>
+                            <p class="small text-muted">Sektör Deneyimi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-lg border border-secondary">
+                    <div class="position-absolute bottom-0 start-0 m-3 bg-warning text-dark p-3 rounded-3 fw-bold shadow">
+                        Birlikte Başarıyoruz
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-5 border-top border-bottom border-secondary">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Bizi Biz Yapan <span class="gold-text">Değerlerimiz</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-4 h-100 text-center">
+                        <i class="bi bi-shield-check fs-1 gold-text mb-3"></i>
+                        <h5>Güvenilirlik</h5>
+                        <p class="small text-secondary">Verilerimizde %99.9 doğruluk payı ile yatırımcılarımızın yanındayız.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100 text-center">
+                        <i class="bi bi-lightning-charge fs-1 gold-text mb-3"></i>
+                        <h5>Hız</h5>
+                        <p class="small text-secondary">Piyasadaki değişimleri milisaniyeler içinde terminalinize yansıtıyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100 text-center">
+                        <i class="bi bi-mortarboard fs-1 gold-text mb-3"></i>
+                        <h5>Eğitim</h5>
+                        <p class="small text-secondary">Sadece veri değil, finansal özgürlük için gereken bilgiyi de sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="text-center fw-bold mb-5">Liderlik <span class="gold-text">Ekibimiz</span></h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pravatar.cc/150?u=1" class="team-img">
+                    <h6 class="fw-bold mb-1">Caner Yıldız</h6>
+                    <p class="small text-warning">CEO & Kurucu</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pravatar.cc/150?u=2" class="team-img">
+                    <h6 class="fw-bold mb-1">Elif Demir</h6>
+                    <p class="small text-warning">CTO</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pravatar.cc/150?u=3" class="team-img">
+                    <h6 class="fw-bold mb-1">Murat Aksu</h6>
+                    <p class="small text-warning">Baş Ekonomist</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pravatar.cc/150?u=4" class="team-img">
+                    <h6 class="fw-bold mb-1">Selin Yılmaz</h6>
+                    <p class="small text-warning">Operasyon Direktörü</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 border-top border-secondary text-center">
+        <p class="text-secondary">© nur erel. Geleceği Birlikte İnşa Ediyoruz.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
